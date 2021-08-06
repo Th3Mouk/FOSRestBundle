@@ -11,3 +11,5 @@ framework:
     default_locale: en
     property_access: ~
     annotations: ~
+    validation:
+        enable_annotations: true
