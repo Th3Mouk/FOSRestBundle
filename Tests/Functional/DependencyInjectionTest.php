@@ -65,6 +65,7 @@ class TestKernel extends Kernel
                     'resource' => '%kernel.project_dir%/config/routing.yml',
                     'utf8' => true,
                 ],
+                'annotations' => true,
             ]);
             $container->loadFromExtension('fos_rest', []);
             $container->setAlias('test.jms_serializer.handler_registry', new Alias('jms_serializer.handler_registry', true));

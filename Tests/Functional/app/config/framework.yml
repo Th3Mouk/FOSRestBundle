@@ -9,3 +9,5 @@ framework:
     session:
         storage_id: session.storage.mock_file
     default_locale: en
+    property_access: ~
+    annotations: ~
