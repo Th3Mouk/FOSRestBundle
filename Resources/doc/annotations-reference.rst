@@ -7,63 +7,115 @@ Param fetcher
 QueryParam
 ~~~~~~~~~~
 
-.. code-block:: php
+.. configuration-block::
 
-    use FOS\RestBundle\Controller\Annotations\QueryParam;
+    .. code-block:: php-annotations
 
-    /**
-     * @QueryParam(
-     *   name="",
-     *   key=null,
-     *   requirements="",
-     *   incompatibles={},
-     *   default=null,
-     *   description="",
-     *   strict=false,
-     *   map=false,
-     *   nullable=false
-     * )
-     */
+        use FOS\RestBundle\Controller\Annotations\QueryParam;
+
+        /**
+         * @QueryParam(
+         *   name="",
+         *   key=null,
+         *   requirements="",
+         *   incompatibles={},
+         *   default=null,
+         *   description="",
+         *   strict=false,
+         *   map=false,
+         *   nullable=false
+         * )
+         */
+
+    .. code-block:: php-attributes
+
+        use FOS\RestBundle\Controller\Annotations\QueryParam;
+
+        #[QueryParam(
+            name: '',
+            key: null,
+            requirements: '',
+            incompatibles = [],
+            default: null,
+            description: '',
+            strict: false,
+            map: false,
+            nullable: false
+        )]
 
 RequestParam
 ~~~~~~~~~~~~
 
-.. code-block:: php
+.. configuration-block::
 
-    use FOS\RestBundle\Controller\Annotations\RequestParam;
+    .. code-block:: php-annotations
 
-    /**
-     * @RequestParam(
-     *   name="",
-     *   key=null,
-     *   requirements="",
-     *   default=null,
-     *   description="",
-     *   strict=true,
-     *   map=false,
-     *   nullable=false
-     * )
-     */
+        use FOS\RestBundle\Controller\Annotations\RequestParam;
+
+        /**
+         * @RequestParam(
+         *   name="",
+         *   key=null,
+         *   requirements="",
+         *   default=null,
+         *   description="",
+         *   strict=true,
+         *   map=false,
+         *   nullable=false
+         * )
+         */
+
+    .. code-block:: php-attributes
+
+        use FOS\RestBundle\Controller\Annotations\RequestParam;
+
+        #[RequestParam(
+            name: '',
+            key: null,
+            requirements: '',
+            default: null,
+            description: '',
+            strict: true,
+            map: false,
+            nullable: false
+        )]
 
 FileParam
 ~~~~~~~~~
 
-.. code-block:: php
+.. configuration-block::
 
-    use FOS\RestBundle\Controller\Annotations\FileParam;
+    .. code-block:: php-annotations
 
-    /**
-     * @FileParam(
-     *   name="",
-     *   key=null,
-     *   requirements={},
-     *   default=null,
-     *   description="",
-     *   strict=true,
-     *   nullable=false,
-     *   image=false
-     * )
-     */
+        use FOS\RestBundle\Controller\Annotations\FileParam;
+
+        /**
+         * @FileParam(
+         *   name="",
+         *   key=null,
+         *   requirements={},
+         *   default=null,
+         *   description="",
+         *   strict=true,
+         *   nullable=false,
+         *   image=false
+         * )
+         */
+
+    .. code-block:: php-attributes
+
+        use FOS\RestBundle\Controller\Annotations\FileParam;
+
+        #[FileParam(
+            name: '',
+            key: null,
+            requirements: [],
+            default: null,
+            description: '',
+            strict: true,
+            nullable: false,
+            image: false
+        )]
 
 View
 ----
