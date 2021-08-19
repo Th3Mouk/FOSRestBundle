@@ -43,7 +43,7 @@
     "require-dev": {
         "doctrine/annotations": "^1.13.2",
         "psr/log": "^1.0|^2.0|^3.0",
-        "sensio/framework-extra-bundle": "^5.2.3",
+        "sensio/framework-extra-bundle": "^6.1",
         "symfony/phpunit-bridge": "^5.2",
         "symfony/asset": "^4.4|^5.0",
         "symfony/form": "^4.4|^5.0",
@@ -70,7 +70,7 @@
     },
     "conflict": {
         "doctrine/annotations": "<1.12",
-        "sensio/framework-extra-bundle": "<5.2.3",
+        "sensio/framework-extra-bundle": "<6.1",
         "symfony/error-handler": "<4.4.1",
         "jms/serializer-bundle": "<2.4.3|3.0.0",
         "jms/serializer": "<1.13.0"
