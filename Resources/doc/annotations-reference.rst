@@ -120,17 +120,29 @@ FileParam
 View
 ----
 
-.. code-block:: php
+.. configuration-block::
 
-    use FOS\RestBundle\Controller\Annotations\View;
+    .. code-block:: php-annotations
 
-    /**
-     * @View(
-     *  statusCode=null,
-     *  serializerGroups={},
-     *  serializerEnableMaxDepthChecks=false
-     * )
-     */
+        use FOS\RestBundle\Controller\Annotations\View;
+
+        /**
+         * @View(
+         *  statusCode=null,
+         *  serializerGroups={},
+         *  serializerEnableMaxDepthChecks=false
+         * )
+         */
+
+    .. code-block:: php-attributes
+
+        use FOS\RestBundle\Controller\Annotations\View;
+
+        #[View(
+            statusCode: null,
+            serializerGroups: [],
+            serializerEnableMaxDepthChecks: false
+        )]
 
 Routing
 -------
