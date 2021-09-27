@@ -12,11 +12,16 @@
 return function (Symfony\Component\DependencyInjection\Loader\Configurator\ContainerConfigurator $container) {
     // BC layer to avoid deprecation warnings in symfony < 5.3
     if (class_exists(Symfony\Bundle\SecurityBundle\RememberMe\FirewallAwareRememberMeHandler::class)) {
-        $tokenAuthenticatorClass = \FOS\RestBundle\Tests\Functional\Bundle\TestBundle\Security\ApiTokenAuthenticator::class;
+        // BC layer to handle return type variations
+        if (class_exists(\Symfony\Component\Security\Http\Authenticator\Passport\PassportInterface::class)) {
+            $tokenAuthenticatorClass = \FOS\RestBundle\Tests\Functional\Bundle\TestBundle\Security\ApiTokenAuthenticatorV5::class;
+        } else {
+            $tokenAuthenticatorClass = \FOS\RestBundle\Tests\Functional\Bundle\TestBundle\Security\ApiTokenAuthenticatorV6::class;
+        }
     } else {
         $tokenAuthenticatorClass = \FOS\RestBundle\Tests\Functional\Bundle\TestBundle\Security\ApiTokenGuardAuthenticator::class;
     }
-
+    
     $services = $container->services();
     $services->set('api_token_authenticator', $tokenAuthenticatorClass);
 };
